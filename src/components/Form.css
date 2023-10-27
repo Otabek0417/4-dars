@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+input {
+  font-size: 16px;
+  width: 100%;
+  max-width: 638px;
+  padding: 16px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background: #262626;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  color: #808080;
+  border: 1px solid #000;
+
+}
+
+input:focus {
+  border-color: blue;
+}
+
+.form button {
+  border: none;
+  background-color: inherit;
+  color: #f2f2f2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+.wrapper {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #1e6f9f;
+}

@@ -1,0 +1,47 @@
+.todoList {
+  padding-top: 65px;
+}
+.todoList__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todoList__concluidas {
+  width: 100%;
+  max-width: 736px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todoList__length {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4ea8de;
+  margin-right: 8px;
+}
+
+.todoList__length-number {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: #333;
+  color: #d9d9d9;
+}
+
+.todoList__done {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8284fa;
+  margin-right: 8px;
+}
+
+.todoList__done-number {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 99px;
+  background: #333;
+  color: #d9d9d9;
+}
