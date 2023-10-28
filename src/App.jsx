@@ -7,6 +7,8 @@ import EventList from "./components/EventList";
 
 function App() {
   const [todos, setTodos] = useState([]);
+  console.log(todos);
+  // !AddTodos
   const addTodos = (newTodo) => {
     console.log(newTodo);
     setTodos((prev) => {
@@ -20,12 +22,11 @@ function App() {
         if (item.id === id) {
           return { ...item, selected: !item.selected };
         } else {
-          return item
+          return item;
         }
       });
     });
   };
-  console.log(todos);
   //! Delete
   const deleteItem = (id) => {
     setTodos((prev) => {
@@ -34,11 +35,17 @@ function App() {
       });
     });
   };
+
+  // filterSelectLength
+  const newFilter = todos.filter((item) => {
+    return item.selected === true;
+  });
+
   return (
     <div className="App">
       <Header />
       <Form addTodos={addTodos} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} newFilter={newFilter.length} />
       <EventList
         todos={todos}
         selectedFunc={selectedFunc}

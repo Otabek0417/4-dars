@@ -9,6 +9,8 @@
   max-width: 736px;
   display: flex;
   flex-direction: column;
+  height: 350px;
+  overflow: auto;
 }
 
 .event__list-input-w {

@@ -16,8 +16,7 @@ input {
   border-radius: 8px;
   outline: none;
   color: #808080;
-  border: 1px solid #000;
-
+  border: 3px dotted #262626;
 }
 
 input:focus {
@@ -40,4 +39,9 @@ input:focus {
   gap: 8px;
   border-radius: 8px;
   background: #1e6f9f;
+  border: 3px dotted #1e6f9f;
+  transition: 0.3s ease;
+}
+.wrapper:active {
+  border-color: rgb(235, 216, 12);
 }
