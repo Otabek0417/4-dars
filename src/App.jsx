@@ -1,19 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // *Components
 import Header from "./components/Header";
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 import EventList from "./components/EventList";
 
+const localStorageFunc = () => {
+  return JSON.parse(localStorage.getItem("todos")) || [];
+};
+
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(localStorageFunc());
+
   console.log(todos);
+
   // !AddTodos
   const addTodos = (newTodo) => {
     console.log(newTodo);
     setTodos((prev) => {
       return [...prev, newTodo];
     });
+    localStorage.setItem("todos", JSON.stringify(todos));
   };
   //! Select
   const selectedFunc = (id) => {
@@ -35,6 +42,9 @@ function App() {
       });
     });
   };
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos.length]);
 
   // filterSelectLength
   const newFilter = todos.filter((item) => {
